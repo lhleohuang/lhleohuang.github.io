@@ -80,6 +80,38 @@
       line-height: 1.6;
       padding: 0 16px;
     }
+
+    /* Tooltip wrapper around “good books” */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: underline; /* ensure underline */
+    }
+
+    /* Hidden tooltip text, matching image hover styling */
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      text-align: center;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+
+      /* Positioning */
+      position: absolute;
+      bottom: 100%; /* place directly above the word without extra space */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    /* Show tooltip on hover */
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
   </style>
 </head>
 <body>
@@ -100,7 +132,13 @@
         and I'm applying it to the study of <a href="./research.html" target="_blank">human and machine intelligence</a>.
       </p>
       <p>
-        In my free time, I play cello with friends, read philosophy and the humanities, go to 
+        In my free time, I play cello with friends, read 
+        <span class="tooltip">
+          philosophy
+          <span class="tooltiptext">
+            Talk to me about 19th and 20th century continental and analytic philosophy!
+          </span>
+        </span> and the humanities, go to 
         <a href="./music.html" target="_blank">concerts</a>, and watch  
         <a href="./films.html" target="_blank">good films</a>.
       </p>
