@@ -17,10 +17,10 @@
       color: #333;
     }
 
-    /* Ensure any links inherit the text color */
+    /* Ensure links inherit the text color and are underlined */
     a {
       color: inherit;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     /* Container that holds everything */
@@ -28,8 +28,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* push content down so the photo sits a bit above center */
-      padding-top: 10vh;
+      /* push content down so the photo sits a bit above center, and add horizontal margin on small screens */
+      padding: 10vh 16px 0;
       min-height: 100vh;
       box-sizing: border-box;
     }
@@ -42,7 +42,7 @@
 
     /* Your photo (enlarged a bit) */
     .photo {
-      max-width: 360px;      /* increased from 300px */
+      max-width: 360px;
       width: 80%;
       height: auto;
       border-radius: 8px;
@@ -55,6 +55,8 @@
       display: none;
       position: absolute;
       top: 100%;            /* place directly below the photo */
+      left: 50%;            /* center horizontally */
+      transform: translateX(-50%);
       background: rgba(0, 0, 0, 0.75);
       color: #fff;
       padding: 6px 10px;
