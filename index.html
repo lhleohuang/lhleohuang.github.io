@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GitHub Pages</title>
+
+  <!-- Font Awesome (for the link icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dNrQOt5Dccj9n+3WzQ1YwXdzB+dn0Qn3r2Zog/x3Gi4dq4PyNZ8x0xI/hTWlsGhJrvzEktEcwwVFxQ3r6vMT1g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    /* Basic reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Container that holds everything */
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* push content down so the photo sits a bit above center */
+      padding-top: 10vh;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Your photo */
+    .photo {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Intro paragraph */
+    .intro {
+      max-width: 600px;
+      margin: 24px auto 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+
+    /* Row of icons */
+    .icons {
+      margin-top: 32px;
+    }
+    .icons a {
+      margin: 0 12px;
+      color: #333;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .icons a:hover {
+      color: #0073e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 1) Replace "path/to/your-photo.jpg" with your actual image filename -->
+    <img src="path/to/your-photo.jpg" alt="My Photo" class="photo" />
+
+    <!-- 2) Write your introduction here -->
+    <div class="intro">
+      <p>
+        Hi, I’m <strong>[Your Name]</strong>. I’m a [Your Role] based in [City/Country],
+        passionate about [a few keywords: e.g. “web development, open-source, and AI.”]
+        In my free time, I enjoy [hobby or two]. Welcome to my personal page!
+      </p>
+    </div>
+
+    <!-- 3) Change each href to your actual profile URLs -->
+    <div class="icons">
+      <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/your-username" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <!-- add more icons as needed, e.g. <i class="fas fa-envelope"></i> for email -->
+    </div>
+  </div>
+</body>
+</html>
