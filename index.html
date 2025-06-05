@@ -5,14 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lianghuan Huang</title>
 
-  <!-- Font Awesome (for the link icons) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-dNrQOt5Dccj9n+3WzQ1YwXdzB+dn0Qn3r2Zog/x3Gi4dq4PyNZ8x0xI/hTWlsGhJrvzEktEcwwVFxQ3r6vMT1g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- Font Awesome (removed since icons are no longer used) -->
 
   <style>
     /* Basic reset */
@@ -26,6 +19,12 @@
       color: #333;
     }
 
+    /* Ensure any links inherit the text color */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     /* Container that holds everything */
     .wrapper {
       display: flex;
@@ -37,6 +36,12 @@
       box-sizing: border-box;
     }
 
+    /* Photo container (for hover credit box) */
+    .photo-container {
+      position: relative;
+      display: inline-block;
+    }
+
     /* Your photo */
     .photo {
       max-width: 300px;
@@ -44,6 +49,29 @@
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    /* Floating credit box, hidden by default */
+    .credit-box {
+      display: none;
+      position: absolute;
+      bottom: 100%; /* place above the photo */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      margin-bottom: 8px;
+      pointer-events: none;
+    }
+
+    /* Show credit box on hover */
+    .photo-container:hover .credit-box {
+      display: block;
     }
 
     /* Intro paragraph */
@@ -54,50 +82,31 @@
       line-height: 1.6;
       padding: 0 16px;
     }
-
-    /* Row of icons */
-    .icons {
-      margin-top: 32px;
-    }
-    .icons a {
-      margin: 0 12px;
-      color: #333;
-      font-size: 2rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .icons a:hover {
-      color: #0073e6;
-    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <!-- 1) Replace "path/to/your-photo.jpg" with your actual image filename -->
-    <img src="./photo.jpg" alt="My Photo" class="photo" />
-
-    <!-- 2) Write your introduction here -->
-    <div class="intro">
-      <p>Hi, I’m <strong>Lianghuan Huang</strong>, a.k.a. Leo among my friends and colleagues. 
-        I'm a physics major at the University of Pennsylvania. Physics taught me all about curiosity, 
-        and I'm applying it to the study of human and machine intelligence.</p> 
-      <p>In my free time, I play cello with 
-        friends, read philosophy and the humanities, go to concerts and watch good films.</p> 
-      <p>Welcome to my personal page!</p>
+    <!-- Photo + hover credit -->
+    <div class="photo-container">
+      <img src="./photo.jpg" alt="My Photo" class="photo" />
+      <div class="credit-box">
+        Photo credit: [Photographer Name]
+      </div>
     </div>
 
-    <!-- 3) Change each href to your actual profile URLs -->
-    <div class="icons">
-      <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/your-username" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <!-- add more icons as needed, e.g. <i class="fas fa-envelope"></i> for email -->
+    <!-- Introduction -->
+    <div class="intro">
+      <p>
+        Hi, I’m <strong>Lianghuan Huang</strong>, a.k.a. Leo among my friends and colleagues. 
+        I'm a physics major at the University of Pennsylvania. Physics taught me all about curiosity, 
+        and I'm applying it to the study of human and machine intelligence.
+      </p>
+      <p>
+        In my free time, I play cello with friends, read philosophy and the humanities, go to concerts, and watch good films.
+      </p>
+      <p>
+        Welcome to my personal page!
+      </p>
     </div>
   </div>
 </body>
