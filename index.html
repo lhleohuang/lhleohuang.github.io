@@ -40,9 +40,9 @@
       display: inline-block;
     }
 
-    /* Your photo */
+    /* Your photo (enlarged a bit) */
     .photo {
-      max-width: 300px;
+      max-width: 360px;      /* increased from 300px */
       width: 80%;
       height: auto;
       border-radius: 8px;
@@ -54,16 +54,15 @@
     .credit-box {
       display: none;
       position: absolute;
-      bottom: 100%; /* place above the photo */
-      left: 50%;
-      transform: translateX(-50%);
+      top: 100%;            /* place directly below the photo */
+      left: 0;              /* align to the left edge of the photo */
       background: rgba(0, 0, 0, 0.75);
       color: #fff;
       padding: 6px 10px;
       border-radius: 4px;
       font-size: 0.9rem;
       white-space: nowrap;
-      margin-bottom: 8px;
+      margin-top: 8px;      /* small gap below the photo */
       pointer-events: none;
     }
 
@@ -88,19 +87,21 @@
     <div class="photo-container">
       <img src="./photo.jpg" alt="My Photo" class="photo" />
       <div class="credit-box">
-        Photo credit: [Photographer Name]
+        Photo credit: Lionel Hu
       </div>
     </div>
 
     <!-- Introduction -->
     <div class="intro">
       <p>
-        Hi, I’m <strong>Lianghuan Huang</strong>, a.k.a. Leo among my friends and colleagues. 
+        Hi, I’m <strong>Lianghuan Huang</strong>, a.k.a. Leo among my friends and colleagues.&nbsp;
         I'm a physics major at the University of Pennsylvania. Physics taught me all about curiosity, 
-        and I'm applying it to the study of human and machine intelligence.
+        and I'm applying it to the <a href="./research.html" target="_blank">study</a> of human and machine intelligence.
       </p>
       <p>
-        In my free time, I play cello with friends, read philosophy and the humanities, go to concerts, and watch good films.
+        In my free time, I play cello with friends, read philosophy and the humanities, go to 
+        <a href="./music.html" target="_blank">concerts</a>, and watch good 
+        <a href="./films.html" target="_blank">films</a>.
       </p>
       <p>
         Welcome to my personal page!
