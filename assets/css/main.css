@@ -1,0 +1,99 @@
+/* Adapted from LeNPaul/full-circle's _sass/main.scss (MIT license). */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/source-sans-pro-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/source-sans-pro-bold.ttf') format('truetype');
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #268bd2;
+  opacity: 0.75;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "heading" "photo" "bio" "research";
+  align-items: start;
+}
+
+.introduction h1 {
+  grid-area: heading;
+}
+
+.intro-bio {
+  grid-area: bio;
+}
+
+.intro-research {
+  grid-area: research;
+}
+
+.profile-photo {
+  grid-area: photo;
+  display: block;
+  width: min(100%, 15rem);
+  height: auto;
+  margin: 1rem auto 1.5rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .introduction {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas: "heading photo" "bio photo" "research photo";
+  }
+
+  .profile-photo {
+    width: min(calc(100% - 2rem), 16rem);
+    margin: 0.375rem 0 0 auto;
+  }
+}
+
+.social-media-icons a {
+  color: #000000;
+}
+
+.email-icon,
+.music-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 44px;
+}
+
+p {
+  overflow-wrap: break-word;
+}
